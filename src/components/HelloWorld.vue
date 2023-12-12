@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -33,9 +34,20 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String,
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: 'Home',
+  data() {
+    return {
+      user: {},
+    };
+  },
+  methods: {
+    onSubmit() {
+      console.log(this.user);
+    },
+  },
+  created() {
+    console.log(this);
   },
 };
 </script>
